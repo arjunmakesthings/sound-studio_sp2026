@@ -9,38 +9,29 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 33.0, 108.0, 1932.0, 1111.0 ],
+        "rect": [ 34.0, 102.0, 1732.0, 993.0 ],
         "default_fontsize": 24.0,
         "boxes": [
             {
                 "box": {
-                    "id": "obj-124",
-                    "maxclass": "comment",
+                    "id": "obj-24",
+                    "maxclass": "toggle",
                     "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1121.1111645698547, 150.11110305786133, 204.0, 33.0 ],
-                    "text": "< start metronome"
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 1091.1111631393433, 143.5294177532196, 24.0, 24.0 ]
                 }
             },
             {
                 "box": {
-                    "id": "obj-123",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1244.4445037841797, 192.333327293396, 169.0, 33.0 ],
-                    "text": "< open camera"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-121",
-                    "linecount": 4,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1447.777846813202, 218.99999523162842, 274.0, 114.0 ],
-                    "text": "jit.grab opens a camera. arguments are resolution - lower is better for simple computer vision."
+                    "id": "obj-19",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1325.8824082612991, 188.99999380111694, 65.0, 35.0 ],
+                    "text": "close"
                 }
             },
             {
@@ -61,7 +52,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1190.0000567436218, 191.22221612930298, 62.0, 35.0 ],
+                    "patching_rect": [ 1233.3333877325058, 184.9462447166443, 62.0, 35.0 ],
                     "text": "open"
                 }
             },
@@ -84,18 +75,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "patching_rect": [ 1091.1111631393433, 188.99999380111694, 103.0, 35.0 ],
-                    "text": "metro 20"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-112",
-                    "maxclass": "toggle",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "int" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 1092.2222743034363, 150.11110305786133, 24.0, 24.0 ]
+                    "text": "metro 60"
                 }
             },
             {
@@ -106,7 +86,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 47.0, 43.0, 296.0, 69.0 ],
+                    "patching_rect": [ 51.0, 93.0, 296.0, 69.0 ],
                     "text": "1. go to Options -> Audio Status... and set your audio input device to \"Model 24\" (modular zone mixer) or \"Model 16\" (center table mixer)"
                 }
             },
@@ -142,7 +122,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 791.0, 588.0, 252.0, 69.0 ],
+                    "patching_rect": [ 791.0, 588.0, 254.0, 69.0 ],
                     "text": "use this to play back audio through the mixer (turn up channels 21+22 to hear - may have to change these numbers if you're using the smaller mixer)"
                 }
             },
@@ -338,12 +318,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-113", 0 ],
-                    "source": [ "obj-112", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-114", 0 ],
                     "source": [ "obj-113", 0 ]
                 }
@@ -364,6 +338,18 @@
                 "patchline": {
                     "destination": [ "obj-9", 0 ],
                     "source": [ "obj-13", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-114", 0 ],
+                    "source": [ "obj-19", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-113", 0 ],
+                    "source": [ "obj-24", 0 ]
                 }
             },
             {
