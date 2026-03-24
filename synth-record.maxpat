@@ -169,11 +169,11 @@
                 "box": {
                     "fontsize": 8.0,
                     "id": "obj-4",
-                    "linecount": 4,
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 150.66667115688324, 128.66667050123215, 178.0, 42.0 ],
+                    "patching_rect": [ 150.59523665905, 128.66667050123215, 514.1666620969772, 33.0 ],
                     "text": "small patch to record myself making music with analog-synthesizers.\n\n//patch adapted from luke du-bois."
                 }
             }
